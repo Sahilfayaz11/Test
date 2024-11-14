@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposal</title>
+</head>
+<body>
+  <div id="question">Will you go out with me?</div>
+  <div id="buttons">
+    <button id="yesButton">Yes</button>
+    <button id="noButton">No</button>
+  </div>
+
+  <script>
+    const yesButton = document.getElementById('yesButton');
+    const noButton = document.getElementById('noButton');
+    const question = document.getElementById('question');
+
+    yesButton.addEventListener('click', () => {
+      alert("Yay! I knew you'd say yes!");
+    });
+
+    noButton.addEventListener('mouseover', () => {
+      noButton.style.position = 'absolute';
+      noButton.style.top = `${Math.random() * 80 + 10}%`;
+      noButton.style.left = `${Math.random() * 80 + 10}%`;
+    });
+
+    noButton.addEventListener('click', () => {
+      question.innerText = "Are you sure you don't want to say yes?";
+    });
+  </script>
+
+</body>
+</html>
